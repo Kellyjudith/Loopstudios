@@ -16,8 +16,8 @@ Agrega aquí una **captura de pantalla** del resultado final de tu landing page.
 
 ### 🔗 Enlaces del proyecto
 
-- **Repositorio en GitHub:** [Agrega aquí la URL de tu repositorio](https://github.com/)
-- **Sitio desplegado (opcional):** [Agrega aquí la URL del proyecto desplegado, si usaste Vercel o Netlify](https://)
+- **Repositorio en GitHub:** [Repositorio Loopstudios](https://github.com/Kellyjudith/Loopstudios)
+- **Sitio desplegado (opcional):** [Deployment en Vercel](https://loopstudios-landing-amber.vercel.app/)
 
 ---
 
