@@ -1,0 +1,66 @@
+---
+---
+<header class="absolute top-0 left-0 w-full z-50 px-6 py-8 md:px-10 lg:px-16 lg:py-10">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/">
+      <img src="/logo.svg" alt="Loopstudios" class="w-36 md:w-44" />
+    </a>
+
+    <!-- Nav desktop -->
+    <nav class="hidden md:flex gap-6">
+      <a href="#" class="text-white font-alata text-sm hover:border-b-2 hover:border-white pb-1 transition-all">About</a>
+      <a href="#" class="text-white font-alata text-sm hover:border-b-2 hover:border-white pb-1 transition-all">Careers</a>
+      <a href="#" class="text-white font-alata text-sm hover:border-b-2 hover:border-white pb-1 transition-all">Events</a>
+      <a href="#" class="text-white font-alata text-sm hover:border-b-2 hover:border-white pb-1 transition-all">Products</a>
+      <a href="#" class="text-white font-alata text-sm hover:border-b-2 hover:border-white pb-1 transition-all">Support</a>
+    </nav>
+
+    <!-- Hamburger mobile -->
+    <button
+      id="menu-btn"
+      class="md:hidden z-50"
+      aria-label="Toggle menu"
+    >
+      <img src="/icon-hamburger.svg" alt="Menu" id="hamburger-icon" class="w-6" />
+      <img src="/icon-close.svg" alt="Cerrar" id="close-icon" class="w-6 hidden" />
+    </button>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 bg-black z-40 flex-col justify-center px-6 hidden"
+  >
+    <img src="/logo.svg" alt="Loopstudios" class="w-36 mb-16" />
+    <nav class="flex flex-col gap-6">
+      <a href="#" class="text-white font-josefin text-2xl uppercase tracking-widest hover:text-gray200 transition-colors">About</a>
+      <a href="#" class="text-white font-josefin text-2xl uppercase tracking-widest hover:text-gray200 transition-colors">Careers</a>
+      <a href="#" class="text-white font-josefin text-2xl uppercase tracking-widest hover:text-gray200 transition-colors">Events</a>
+      <a href="#" class="text-white font-josefin text-2xl uppercase tracking-widest hover:text-gray200 transition-colors">Products</a>
+      <a href="#" class="text-white font-josefin text-2xl uppercase tracking-widest hover:text-gray200 transition-colors">Support</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    if (isOpen) {
+      menu?.classList.add('hidden');
+      menu?.classList.remove('flex');
+      hamburger?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    } else {
+      menu?.classList.remove('hidden');
+      menu?.classList.add('flex');
+      hamburger?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+    }
+  });
+</script>

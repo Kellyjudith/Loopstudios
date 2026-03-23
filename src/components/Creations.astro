@@ -1,0 +1,52 @@
+---
+const creations = [
+  { name: "Deep Earth", desktop: "/images/desktop/image-deep-earth.jpg", mobile: "/images/mobile/image-deep-earth.jpg" },
+  { name: "Night Arcade", desktop: "/images/desktop/image-night-arcade.jpg", mobile: "/images/mobile/image-night-arcade.jpg" },
+  { name: "Soccer Team VR", desktop: "/images/desktop/image-soccer-team.jpg", mobile: "/images/mobile/image-soccer-team.jpg" },
+  { name: "The Grid", desktop: "/images/desktop/image-grid.jpg", mobile: "/images/mobile/image-grid.jpg" },
+  { name: "From Up Above VR", desktop: "/images/desktop/image-from-above.jpg", mobile: "/images/mobile/image-from-above.jpg" },
+  { name: "Pocket Borealis", desktop: "/images/desktop/image-pocket-borealis.jpg", mobile: "/images/mobile/image-pocket-borealis.jpg" },
+  { name: "The Curiosity", desktop: "/images/desktop/image-curiosity.jpg", mobile: "/images/mobile/image-curiosity.jpg" },
+  { name: "Make It Fisheye", desktop: "/images/desktop/image-fisheye.jpg", mobile: "/images/mobile/image-fisheye.jpg" },
+];
+---
+
+<section class="px-6 py-8 md:px-10 lg:px-16 lg:py-12">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="font-josefin text-black text-3xl md:text-4xl uppercase font-light">
+        Our Creations
+      </h2>
+      <a href="#" class="hidden md:block border border-black px-8 py-2 font-alata text-sm uppercase tracking-widest hover:bg-black hover:text-white transition-colors">
+        See All
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {creations.map((item) => (
+        <a href="#" class="relative group overflow-hidden block">
+          <picture>
+            <source media="(min-width: 768px)" srcset={item.desktop} />
+            <img
+              src={item.mobile}
+              alt={item.name}
+              class="w-full h-full object-cover group-hover:opacity-50 transition-opacity duration-300"
+            />
+          </picture>
+          <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
+          <p class="absolute bottom-4 left-4 right-4 font-josefin text-white text-2xl md:text-3xl uppercase font-light leading-tight">
+            {item.name}
+          </p>
+        </a>
+      ))}
+    </div>
+
+    <div class="flex justify-center mt-8 md:hidden">
+      <a href="#" class="border border-black px-16 py-2 font-alata text-sm uppercase tracking-widest hover:bg-black hover:text-white transition-colors">
+        See All
+      </a>
+    </div>
+
+  </div>
+</section>

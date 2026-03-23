@@ -1,0 +1,25 @@
+---
+---
+<section class="relative w-full h-[65vh] md:h-screen">
+  <!-- Imagen de fondo desktop/mobile -->
+  <picture>
+    <source media="(min-width: 768px)" srcset="/images/desktop/image-hero.jpg" />
+    <img
+      src="/images/mobile/image-hero.jpg"
+      alt="Hero Loopstudios"
+      class="w-full h-full object-cover"
+    />
+  </picture>
+
+  <!-- Overlay oscuro -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Texto hero -->
+  <div class="absolute inset-0 flex items-center px-6 md:px-10 lg:px-16">
+    <div class="border-2 border-white p-6 md:p-10 max-w-lg">
+      <h1 class="font-josefin text-white text-4xl md:text-5xl lg:text-6xl uppercase leading-tight font-light">
+        Immersive Experiences That Deliver
+      </h1>
+    </div>
+  </div>
+</section>
